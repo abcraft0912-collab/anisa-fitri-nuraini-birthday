@@ -287,25 +287,52 @@ function buatHati(){
 </script>
 
 <style>
-.foto-kita{
-  width:100%;
-  margin:30px auto;
+.foto-sisip{
+  width:90px;
+  height:90px;
+  object-fit:cover;
+  border-radius:20px;
+  margin:18px auto;
+  display:block;
+  border:3px solid rgba(255,255,255,.45);
+  box-shadow:0 8px 25px rgba(0,0,0,.35);
+  transform:rotate(-3deg);
 }
 
-.foto-kita img{
-  width:100%;
-  max-width:420px;
-  border-radius:22px;
-  margin:12px 0;
-  border:2px solid rgba(255,255,255,.25);
-  box-shadow:0 10px 30px rgba(0,0,0,.4);
+.foto-sisip:nth-of-type(2){
+  transform:rotate(3deg);
+}
+
+.foto-sisip:nth-of-type(3){
+  transform:rotate(-2deg);
 }
 </style>
 
-<div class="foto-kita">
-  <img src="f3235ee514ae4b008003c2edf0e7e788.webp">
-  <img src="2e14f7d4cf1ef47539c2b1750868144f.webp">
-  <img src="3c7081857314430aa9729088de3f5056.webp">
-</div>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+
+  const foto=[
+    "f3235ee514ae4b008003c2edf0e7e788.webp",
+    "2e14f7d4cf1ef47539c2b1750868144f.webp",
+    "3c7081857314430aa9729088de3f5056.webp"
+  ];
+
+  const paragraf=document.querySelectorAll("#surat p");
+
+  foto.forEach(function(src,i){
+
+    if(paragraf[i]){
+      const img=document.createElement("img");
+
+      img.src=src;
+      img.className="foto-sisip";
+
+      paragraf[i].after(img);
+    }
+
+  });
+
+});
+</script>
   </body>
 </html>
