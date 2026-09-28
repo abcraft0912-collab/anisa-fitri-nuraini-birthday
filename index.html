@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Anisa ❤️</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:linear-gradient(135deg,#160b12,#4b1d2c,#160b12);
+  color:white;
+  text-align:center;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+.page{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:25px;
+}
+
+.card{
+  width:100%;
+  max-width:500px;
+  padding:35px 25px;
+  border-radius:30px;
+  background:rgba(255,255,255,.10);
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,.2);
+  box-shadow:0 20px 60px rgba(0,0,0,.5);
+}
+
+h1{
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+h2{
+  font-size:32px;
+  margin-bottom:20px;
+}
+
+p{
+  line-height:1.8;
+  color:#ffe8ef;
+  margin-bottom:15px;
+}
+
+.small{
+  letter-spacing:4px;
+  text-transform:uppercase;
+  font-size:12px;
+  color:#ffb8ca;
+  margin-bottom:20px;
+}
+
+button{
+  margin-top:20px;
+  border:none;
+  padding:14px 25px;
+  border-radius:30px;
+  background:#ffb6c8;
+  color:#421522;
+  font-weight:bold;
+  cursor:pointer;
+  font-size:15px;
+}
+
+button:hover{
+  transform:scale(1.05);
+}
+
+.hidden{
+  display:none;
+}
+
+.heart{
+  position:fixed;
+  bottom:-30px;
+  animation:naik 6s linear forwards;
+  pointer-events:none;
+  z-index:10;
+}
+
+@keyframes naik{
+  0%{
+    transform:translateY(0);
+    opacity:1;
+  }
+  100%{
+    transform:translateY(-110vh) rotate(30deg);
+    opacity:0;
+  }
+}
+
+.signature{
+  font-size:24px;
+  color:#ffb8ca;
+  margin-top:25px;
+  font-style:italic;
+}
+
+.quote{
+  font-size:22px;
+  line-height:1.5;
+  color:#ffd8e2;
+  margin:25px 0;
+}
+</style>
+</head>
+
+<body>
+
+<section class="page" id="awal">
+  <div class="card">
+
+    <div class="small">A little surprise for you</div>
+
+    <h1>Anisa ❤️</h1>
+
+    <p>
+      Ada sesuatu yang pengin aku kasih ke kamu.
+      Buka pelan-pelan ya...
+    </p>
+
+    <button onclick="buka('ucapan')">
+      Buka untuk Anisa 💌
+    </button>
+
+  </div>
+</section>
+
+
+<section class="page hidden" id="ucapan">
+  <div class="card">
+
+    <div class="small">Happy Birthday</div>
+
+    <h2>Selamat Ulang Tahun,<br>Anisa Fitri Nuraini ❤️</h2>
+
+    <p>
+      Hari ini adalah hari spesial karena seseorang
+      yang sangat berarti buat aku lahir ke dunia.
+    </p>
+
+    <p>
+      Semoga di umur kamu yang baru,
+      semua hal baik datang satu per satu.
+      Semoga langkah kamu selalu dimudahkan,
+      hati kamu selalu dijaga,
+      dan senyum kamu selalu punya alasan.
+    </p>
+
+    <button onclick="buka('surat')">
+      Ada surat untuk kamu 💌
+    </button>
+
+  </div>
+</section>
+
+
+<section class="page hidden" id="surat">
+  <div class="card">
+
+    <div class="small">From Bagas</div>
+
+    <h2>Untuk kamu, Nis.</h2>
+
+    <p>
+      Terima kasih sudah hadir dalam hidupku.
+      Mungkin aku belum menjadi seseorang yang sempurna,
+      dan mungkin masih banyak hal yang belum bisa aku berikan.
+    </p>
+
+    <p>
+      Tapi aku ingin kamu tahu bahwa keberadaan kamu
+      sangat berarti buat aku.
+    </p>
+
+    <p>
+      Kalau suatu hari kamu sedang capek,
+      semoga kamu ingat bahwa kamu tidak harus
+      menghadapi semuanya sendirian.
+    </p>
+
+    <p>
+      Semoga semua impian kamu perlahan menjadi nyata.
+      Semoga kamu selalu bahagia,
+      sehat, dan dikelilingi orang-orang yang menyayangimu.
+    </p>
+
+    <div class="signature">
+      — Bagas Askar Fadil ❤️
+    </div>
+
+    <button onclick="buka('akhir')">
+      Terakhir...
+    </button>
+
+  </div>
+</section>
+
+
+<section class="page hidden" id="akhir">
+  <div class="card">
+
+    <div class="small">One last thing</div>
+
+    <h1>Happy Birthday<br>Anisa ❤️</h1>
+
+    <div class="quote">
+      "Semoga aku masih bisa menemani
+      banyak ulang tahunmu setelah hari ini."
+    </div>
+
+    <p>
+      Tetaplah menjadi Anisa yang aku kenal.
+      Tetap tersenyum dan jangan pernah berhenti mengejar
+      apa yang kamu impikan.
+    </p>
+
+    <p>
+      Aku sayang kamu. 🤍
+    </p>
+
+    <div class="signature">
+      Bagas
+    </div>
+
+  </div>
+</section>
+
+
+<script>
+
+function buka(id){
+
+  document.querySelectorAll('.page')
+  .forEach(function(page){
+    page.classList.add('hidden');
+  });
+
+  document.getElementById(id)
+  .classList.remove('hidden');
+
+  window.scrollTo(0,0);
+
+  for(let i=0;i<15;i++){
+    setTimeout(buatHati,i*100);
+  }
+}
+
+function buatHati(){
+
+  let hati=document.createElement("div");
+
+  hati.className="heart";
+
+  hati.innerHTML=["❤️","💗","💕","♡","✨"]
+  [Math.floor(Math.random()*5)];
+
+  hati.style.left=Math.random()*100+"vw";
+
+  hati.style.fontSize=
+  (14+Math.random()*20)+"px";
+
+  hati.style.animationDuration=
+  (4+Math.random()*4)+"s";
+
+  document.body.appendChild(hati);
+
+  setTimeout(function(){
+    hati.remove();
+  },8000);
+}
+
+</script>
+
+</body>
+</html>
