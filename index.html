@@ -245,7 +245,12 @@ button:hover{
 
 function buka(id){
 
-  document.getElementById("musik").play();
+const musik = document.getElementById("musik");
+musik.volume = 1;
+musik.currentTime = 0;
+musik.play().catch(function(error){
+  console.log("Musik gagal diputar:", error);
+});
 
   document.querySelectorAll('.page')
   .forEach(function(page){
